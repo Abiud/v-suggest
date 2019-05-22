@@ -7,7 +7,6 @@
       :disabled="disabled"
       ref="input"
       @keyup="processKey"
-      @keyup.enter.prevent
       @keydown="processControl"
       @focus="open"
     >
@@ -57,10 +56,7 @@ export default {
       type: Boolean,
       default: false
     },
-    indexArr: {
-      type: Number,
-      default: null
-    }
+    indexArr: Number
   },
   data() {
     return {
