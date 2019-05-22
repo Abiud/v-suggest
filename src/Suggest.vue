@@ -7,6 +7,7 @@
       :disabled="disabled"
       ref="input"
       @keyup="processKey"
+      @keyup.enter.prevent
       @keydown="processControl"
       @focus="open"
     >
@@ -50,7 +51,7 @@ export default {
     placeholder: String,
     delay: {
       type: Number,
-      default: 0.2
+      default: 0.1
     },
     disabled: {
       type: Boolean,
